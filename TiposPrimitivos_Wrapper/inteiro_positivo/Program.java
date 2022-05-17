@@ -4,7 +4,7 @@ public class Program {
 	public static void main(String[] args) {
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
-		     int valor; 
+		     private int valor; 
 		     valor = 1;
 		     System.out.println(valor + " - " + inteiroPositivo.ehPrimo(valor));
 
@@ -13,7 +13,7 @@ public class Program {
  }
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
-		     int valor1 = Integer.parseInt("43");
+		     private int valor1 = Integer.parseInt("43");
 		     System.out.println(valor1 + " - " + ehPrimo(valor1));
 
 		 } catch (Exception e) {
@@ -31,7 +31,7 @@ public class Program {
 	        }
 		 try {
 			 InteiroPositivo inteiroPositivo = new InteiroPositivo();
-		     int valor1 = Integer.parseInt("44");
+		     private int valor1 = Integer.parseInt("44");
 		     System.out.println(valor1 + " - " + ehPrimo(valor1));
 
 		 } catch (Exception e) {
@@ -50,7 +50,7 @@ public class Program {
 		 
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
-		     int valor1 = Integer.parseInt("378");
+		     private int valor1 = Integer.parseInt("378");
 		     System.out.println(valor1 + " - " + ehPrimo(valor1));
 
 		 } catch (Exception e) {
@@ -58,7 +58,7 @@ public class Program {
 		                    }
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
-		     int valor1 = Integer.parseInt("379");
+		     private int valor1 = Integer.parseInt("379");
 		     System.out.println(valor1 + " - " + ehPrimo(valor1));
 
 		 } catch (Exception e) {
