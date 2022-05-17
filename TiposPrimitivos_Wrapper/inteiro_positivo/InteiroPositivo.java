@@ -1,5 +1,5 @@
 public class InteiroPositivo {
-    static boolean isPrime(int n)
+    static boolean ehPrimo(int n)
     {
         // Corner case
         if (n <= 1)
