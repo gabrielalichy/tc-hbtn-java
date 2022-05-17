@@ -1,4 +1,11 @@
 public class InteiroPositivo {
+    private int valor;
+    static boolean inteiroPositivo(String valor)
+    Boolean valorBoolean = valor.matches("[0-9]*");
+	            if (valorBoolean == false) {
+	                valor = (Integer) null;
+
+	            }
 
     static boolean ehPrimo(int valor)
     {

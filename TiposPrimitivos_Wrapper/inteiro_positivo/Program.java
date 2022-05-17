@@ -21,11 +21,7 @@ public class Program {
 		                    }
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
-	         Boolean valorBoolean = "-1".matches("[0-9]*");
-	            if (valorBoolean == false) {
-	                int valor1 = (Integer) null;
-
-	            }
+			inteiroPositivo.inteiroPositivo
 	        } catch (Exception e) {
 	            System.out.println(e + "Valor nao eh um valor inteiro positivo");
 	        }
