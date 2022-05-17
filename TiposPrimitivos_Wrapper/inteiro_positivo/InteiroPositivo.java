@@ -3,6 +3,8 @@ public class InteiroPositivo {
     public InteiroPositivo(){
 
     }
+    InteiroPositivo inteiroPositivo = new InteiroPositivo("1");
+
     private int valor;
     static boolean Positivo(String valor){
     Boolean valorBoolean = valor.matches("[0-9]*");
@@ -12,7 +14,7 @@ public class InteiroPositivo {
 	            }
                 return valorBoolean;
             }
-            static boolean InteiroPositivo(String valor){
+            static int InteiroPositivo(String valor){
                return valor1 = Interger.parsInt(valor);
                         }
             
