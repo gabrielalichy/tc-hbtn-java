@@ -9,6 +9,7 @@ public class Program {
 		     System.out.println(valor + " - " + inteiroPositivo.ehPrimo(valor));
 
 		 } catch (Exception e) {
+			e.printStackTrace();
 		     System.out.println(e);
  }
 		 try {
@@ -17,12 +18,14 @@ public class Program {
 		     System.out.println(valor1 + " - " + inteiroPositivo.ehPrimo(valor1));
 
 		 } catch (Exception e) {
+			e.printStackTrace();
 		     System.out.println(e);
 		                    }
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
 			inteiroPositivo.Positivo("-1");
 	        } catch (Exception e) {
+				e.printStackTrace();
 	            System.out.println(e + "Valor nao eh um valor inteiro positivo");
 	        }
 		 try {
@@ -31,12 +34,14 @@ public class Program {
 		     System.out.println(valor1 + " - " + inteiroPositivo.ehPrimo(valor1));
 
 		 } catch (Exception e) {
+			e.printStackTrace();
 		     System.out.println(e);
 		                    }
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
 			inteiroPositivo.Positivo("-1");
 	        } catch (Exception e) {
+				e.printStackTrace();
 	            System.out.println(e + "Valor nao eh um valor inteiro positivo");
 	        }
 		 
@@ -46,6 +51,7 @@ public class Program {
 		     System.out.println(valor1 + " - " + inteiroPositivo.ehPrimo(valor1));
 
 		 } catch (Exception e) {
+			e.printStackTrace();
 		     System.out.println(e);
 		                    }
 		 try {
@@ -54,6 +60,7 @@ public class Program {
 		     System.out.println(valor1 + " - " + inteiroPositivo.ehPrimo(valor1));
 
 		 } catch (Exception e) {
+			 e.printStackTrace();
 		     System.out.println(e);
 		                    }
 		 
