@@ -1,15 +1,18 @@
-public class Program {
+public class Program { 
+	InteiroPositivo inteiroPositivo = new InteiroPositivo();
 
 	public static void main(String[] args) {
 		 try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo();
 		     int valor; 
 		     valor = 1;
-		     System.out.println(valor + " - " + isPrime(valor));
+		     System.out.println(valor + " - " + inteiroPositivo.isPrime(valor));
 
 		 } catch (Exception e) {
 		     System.out.println(e);
  }
 		 try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo();
 		     int valor1 = Integer.parseInt("43");
 		     System.out.println(valor1 + " - " + isPrime(valor1));
 
@@ -17,6 +20,7 @@ public class Program {
 		     System.out.println(e);
 		                    }
 		 try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo();
 	         Boolean valorBoolean = "-1".matches("[0-9]*");
 	            if (valorBoolean == false) {
 	                int valor1 = (Integer) null;
@@ -26,6 +30,7 @@ public class Program {
 	            System.out.println("Valor nao eh um valor inteiro positivo");
 	        }
 		 try {
+			 InteiroPositivo inteiroPositivo = new InteiroPositivo();
 		     int valor1 = Integer.parseInt("44");
 		     System.out.println(valor1 + " - " + isPrime(valor1));
 
@@ -33,6 +38,7 @@ public class Program {
 		     System.out.println(e);
 		                    }
 		 try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo();
 	         Boolean valorBoolean = "-1".matches("[0-9]*");
 	            if (valorBoolean == false) {
 	                int valor1 = (Integer) null;
@@ -43,6 +49,7 @@ public class Program {
 	        }
 		 
 		 try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo();
 		     int valor1 = Integer.parseInt("378");
 		     System.out.println(valor1 + " - " + isPrime(valor1));
 
@@ -50,6 +57,7 @@ public class Program {
 		     System.out.println(e);
 		                    }
 		 try {
+			InteiroPositivo inteiroPositivo = new InteiroPositivo();
 		     int valor1 = Integer.parseInt("379");
 		     System.out.println(valor1 + " - " + isPrime(valor1));
 
@@ -58,17 +66,4 @@ public class Program {
 		                    }
 		 
 		    }
-	static boolean isPrime(int n)
-    {
-        // Corner case
-        if (n <= 1)
-            return false;
-
-        // Check from 2 to n-1
-        for (int i = 2; i < n; i++)
-            if (n % i == 0)
-                return false;
-
-        return true;
-    }
 }
