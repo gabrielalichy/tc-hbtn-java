@@ -21,7 +21,7 @@ public class Program {
 		                    }
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
-			inteiroPositivo.inteiroPositivo("-1");
+			inteiroPositivo.Positivo("-1");
 	        } catch (Exception e) {
 	            System.out.println(e + "Valor nao eh um valor inteiro positivo");
 	        }
@@ -35,7 +35,7 @@ public class Program {
 		                    }
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
-			inteiroPositivo.inteiroPositivo("-1");
+			inteiroPositivo.Positivo("-1");
 	        } catch (Exception e) {
 	            System.out.println(e + "Valor nao eh um valor inteiro positivo");
 	        }

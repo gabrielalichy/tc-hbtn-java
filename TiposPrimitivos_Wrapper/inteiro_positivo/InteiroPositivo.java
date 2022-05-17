@@ -5,7 +5,7 @@ public class InteiroPositivo {
     }
 
     private int valor;
-    static boolean inteiroPositivo(String valor){
+    static boolean Positivo(String valor){
     Boolean valorBoolean = valor.matches("[0-9]*");
 	            if (valorBoolean == false) {
 	                valor = (Integer) null;
