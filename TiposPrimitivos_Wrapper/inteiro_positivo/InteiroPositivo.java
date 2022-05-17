@@ -3,6 +3,7 @@ public class InteiroPositivo {
     public InteiroPositivo(){
 
     }
+
     InteiroPositivo inteiroPositivo = new InteiroPositivo("1");
 
     private int valor;
@@ -14,7 +15,7 @@ public class InteiroPositivo {
 	            }
                 return valorBoolean;
             }
-            static int InteiroPositivo(String valor){
+            public int InteiroPositivo(String valor){
                return valor1 = Interger.parsInt(valor);
                         }
             
