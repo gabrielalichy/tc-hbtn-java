@@ -1,14 +1,14 @@
 public class InteiroPositivo {
     private int valor;
-    static boolean inteiroPositivo(String valor)
+    static boolean inteiroPositivo(String valor){
     Boolean valorBoolean = valor.matches("[0-9]*");
 	            if (valorBoolean == false) {
 	                valor = (Integer) null;
 
 	            }
+            }
 
-    static boolean ehPrimo(int valor)
-    {
+    static boolean ehPrimo(int valor){
         // Corner case
         if (valor <= 1)
             return false;
