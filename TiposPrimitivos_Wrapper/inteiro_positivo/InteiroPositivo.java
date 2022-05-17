@@ -12,6 +12,10 @@ public class InteiroPositivo {
 	            }
                 return valorBoolean;
             }
+            static boolean InteiroPositivo(String valor){
+               return valor1 = Interger.parsInt(valor);
+                        }
+            
 
     static boolean ehPrimo(int valor){
             if (valor <= 1)

@@ -3,10 +3,8 @@ public class Program {
 
 	public static void main(String[] args) {
 		 try {
-			InteiroPositivo inteiroPositivo = new InteiroPositivo();
-		     private int valor; 
-		     valor = 1;
-		     System.out.println(valor + " - " + inteiroPositivo.ehPrimo(valor));
+			InteiroPositivo inteiroPositivo = new InteiroPositivo("1");
+		    System.out.println(inteiroPositivo + " - " + inteiroPositivo.ehPrimo(valor));
 
 		 } catch (Exception e) {
 			e.printStackTrace();
