@@ -16,7 +16,7 @@ public class InteiroPositivo {
                 return valorBoolean;
             }
             public int InteiroPositivo(String valor){
-               return valor1 = Interger.parsInt(valor);
+               this.valor = Interger.parsInt(valor);
                         }
             
 
