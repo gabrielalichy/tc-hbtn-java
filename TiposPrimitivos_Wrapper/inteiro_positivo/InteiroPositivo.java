@@ -3,7 +3,6 @@ public class InteiroPositivo {
     public InteiroPositivo(){
 
     }
-
     private int valor;
     static boolean Positivo(String valor){
     Boolean valorBoolean = valor.matches("[0-9]*");
