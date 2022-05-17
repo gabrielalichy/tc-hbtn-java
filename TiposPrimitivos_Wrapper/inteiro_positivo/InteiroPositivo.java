@@ -8,7 +8,7 @@ public class InteiroPositivo {
 
     private int valor;
     static boolean Positivo(String valor){
-    Boolean valorBoolean = valor.matches("[0-9]*");
+    Boolean valorBoolean = valor.matches("[0-380]*");
 	            if (valorBoolean == false) {
 	                valor = (Integer) null;
 
