@@ -11,19 +11,6 @@ public class InteiroPositivo {
             this.valor= Integer.parseInt(valor);
             
         }
-
-	    public InteiroPositivo(long pilha){
-	    	try {
-                String valor = "1";
-	    		this.valor= Integer.parseInt(valor);
-                	    		
-	    			if ((this.valor > 0))	{
-	    				throw new Exception();
-	    			}
-	    		}catch(Exception e) {throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
-	    		
-	    		}
-	    		}
 	    	
 	        boolean ehPrimo(){
                 try {
