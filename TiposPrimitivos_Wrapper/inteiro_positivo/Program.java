@@ -18,7 +18,7 @@ public class Program {
 			System.out.println(e.getMessage());
 				                    }
 		 try {
-			InteiroPositivo inteiroPositivo = new InteiroPositivo("-1");
+			InteiroPositivo inteiroPositivo = new InteiroPositivo(-1L);
 	        } catch (Exception e) {
 				System.out.println(e.getMessage());
 				        }
@@ -31,7 +31,7 @@ public class Program {
 			System.out.println(e.getMessage());
 				                    }
 		 try {
-			InteiroPositivo inteiroPositivo = new InteiroPositivo("-1");
+			InteiroPositivo inteiroPositivo = new InteiroPositivo(-1L);
 	        } catch (Exception e) {
 				System.out.println(e.getMessage());	        }
 		 
