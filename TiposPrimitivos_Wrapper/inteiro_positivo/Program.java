@@ -8,7 +8,11 @@ public class Program {
 
 		 } catch (Exception e) {
 			System.out.println(e.getMessage());
+
 		 }
+
+		 InteiroPositivo inteiroPositivo1 = new InteiroPositivo();
+
 		 try {
 			InteiroPositivo inteiroPositivo = new InteiroPositivo();
 		     int valor1 = Integer.parseInt("43");
@@ -18,10 +22,13 @@ public class Program {
 			System.out.println(e.getMessage());
 				                    }
 		 try {
-			InteiroPositivo inteiroPositivo = new InteiroPositivo(-1L);
-	        } catch (Exception e) {
-				System.out.println(e.getMessage());
-				        }
+
+			
+		inteiroPositivo1.setValor(-1);
+			System.out.println(inteiroPositivo1.getValor() + " - " + inteiroPositivo1.ehPrimo());
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+		        }
 		 try {
 			 InteiroPositivo inteiroPositivo = new InteiroPositivo("44");
 		     int valor1 = Integer.parseInt("44");
