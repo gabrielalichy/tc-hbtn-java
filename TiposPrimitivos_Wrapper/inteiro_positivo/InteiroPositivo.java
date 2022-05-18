@@ -1,7 +1,7 @@
 public class InteiroPositivo {
 	int valor;
 	  public InteiroPositivo(){
-	    	
+          	    	
 	    }
 	    public InteiroPositivo(int valor){
 	    	this.valor = valor;
@@ -29,7 +29,13 @@ public class InteiroPositivo {
         return true;
 	    	
 	    }
-	
+	    
+        public int getValor() {
+			return valor;
+		}
+		public void setValor(int valor) {
+			this.valor = valor;
+		}
 	
 			
 		}
