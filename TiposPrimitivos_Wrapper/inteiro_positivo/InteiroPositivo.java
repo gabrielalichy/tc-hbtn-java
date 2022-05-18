@@ -20,7 +20,7 @@ public class InteiroPositivo {
 	    			if ((this.valor > 0))	{
 	    				throw new Exception();
 	    			}
-	    		}catch(Exception e) {throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
+	    		}catch(Exception e) {System.out.println("Valor nao eh um valor inteiro positivo");
 	    		
 	    		}
 	    		}
