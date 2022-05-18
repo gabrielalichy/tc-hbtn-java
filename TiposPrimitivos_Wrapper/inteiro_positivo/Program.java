@@ -28,7 +28,7 @@ public class Program {
                 System.out.println(ex.getMessage());
 		        }
 		 try {
-			 inteiroPositivo1.setValor(inteiroPositivo1.getValor() +45);
+			 inteiroPositivo1.setValor(inteiroPositivo1.getValor() + 1);
 		     System.out.println(inteiroPositivo1.getValor() + " - " + inteiroPositivo1.ehPrimo());
 
 		 } catch (Exception e) {

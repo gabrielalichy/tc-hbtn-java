@@ -28,6 +28,7 @@ public class InteiroPositivo {
 	        boolean ehPrimo(){
                 try {
                     if ((this.valor < 0))	{
+                        this.valor = 43;
 	    				throw new Exception();
 	    			}
                     if (this.valor <= 1)
@@ -40,8 +41,7 @@ public class InteiroPositivo {
         return true;
 	    	
                 } catch (Exception e) {throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
-                   
-                }
+            }
             
 	    }
 	    
