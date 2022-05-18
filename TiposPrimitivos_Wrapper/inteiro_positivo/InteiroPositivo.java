@@ -39,7 +39,7 @@ public class InteiroPositivo {
 
         return true;
 	    	
-                } catch (Exception e) {throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo ");
+                } catch (Exception e) {throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
                    
                 }
             

@@ -31,8 +31,7 @@ public class Program {
 		        }
 		 try {
 			 InteiroPositivo inteiroPositivo = new InteiroPositivo("44");
-		     int valor1 = Integer.parseInt("44");
-		     System.out.println(valor1 + " - " + inteiroPositivo.ehPrimo());
+		     System.out.println(inteiroPositivo.getValor() + " - " + inteiroPositivo.ehPrimo());
 
 		 } catch (Exception e) {
 			System.out.println(e.getMessage());
