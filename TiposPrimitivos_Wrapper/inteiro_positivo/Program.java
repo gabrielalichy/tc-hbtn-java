@@ -11,27 +11,25 @@ public class Program {
 
 		 }
 
-		 InteiroPositivo inteiroPositivo1 = new InteiroPositivo();
+		 InteiroPositivo inteiroPositivo1 = null;
 
 		 try {
-			InteiroPositivo inteiroPositivo = new InteiroPositivo();
-		     int valor1 = Integer.parseInt("43");
-		     System.out.println(valor1 + " - " + inteiroPositivo.ehPrimo());
+			 inteiroPositivo1 = new InteiroPositivo("43");
+		     System.out.println(inteiroPositivo1.getValor() + " - " + inteiroPositivo1.ehPrimo());
 
 		 } catch (Exception e) {
 			System.out.println(e.getMessage());
 				                    }
 		 try {
 
-			
-		inteiroPositivo1.setValor(-1);
+			inteiroPositivo1.setValor(-1);
 			System.out.println(inteiroPositivo1.getValor() + " - " + inteiroPositivo1.ehPrimo());
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());
 		        }
 		 try {
-			 InteiroPositivo inteiroPositivo = new InteiroPositivo("44");
-		     System.out.println(inteiroPositivo.getValor() + " - " + inteiroPositivo.ehPrimo());
+			 inteiroPositivo1.setValor(inteiroPositivo1.getValor() +45);
+		     System.out.println(inteiroPositivo1.getValor() + " - " + inteiroPositivo1.ehPrimo());
 
 		 } catch (Exception e) {
 			System.out.println(e.getMessage());
