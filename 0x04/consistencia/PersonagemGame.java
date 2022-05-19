@@ -1,12 +1,12 @@
 public class PersonagemGame {
 	
-	public int saudeAtual;
+	private int saudeAtual;
 	public String nome;
 	private String status;
 		
 	public PersonagemGame(int saudeAtual, String nome) {
 		this.nome = nome;
-	setSaudeAtual(saudeAtual);
+		setSaudeAtual(saudeAtual);
 	}
 	
 	public int getSaudeAtual() {
