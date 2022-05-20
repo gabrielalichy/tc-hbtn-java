@@ -34,7 +34,5 @@ public class Empregado {
 	System.out.println("Bairro: " + endereco.bairro);
 	System.out.println("Cidade: " + endereco.cidade);
 	System.out.println("Pais: " + endereco.pais);
-
-
-}
+ }
 }
