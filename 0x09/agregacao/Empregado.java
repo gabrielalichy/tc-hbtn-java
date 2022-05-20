@@ -4,22 +4,22 @@ public class Empregado {
 	int codigo;
 	Endereco endereco;
 	
-	public String getNome() {
+	public String getNome(){
 		return nome;
 	}
-	public void setNome(String nome) {
+	public void setNome(String nome){
 		this.nome = nome;
 	}
-	public int getCodigo() {
+	public int getCodigo(){
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(int codigo){
 		this.codigo = codigo;
 	}
-	public Endereco getEndereco() {
+	public Endereco getEndereco(){
 		return endereco;
 	}
-	public void setEndereco(Endereco endereco) {
+	public void setEndereco(Endereco endereco){
 	}
 	
 	public Empregado(String nome, int codigo, Endereco endereco){
@@ -28,7 +28,7 @@ public class Empregado {
 		this.endereco = endereco;
 	}
 	
-	public void apresentar(int codigo, String nome, Endereco endereco){
+	public void apresentar(int codigo, String nome,Endereco endereco){
 	System.out.println("Codigo: " + codigo);
 	System.out.println("Nome: " + nome);
 	System.out.println("Bairro: " + endereco.bairro);
