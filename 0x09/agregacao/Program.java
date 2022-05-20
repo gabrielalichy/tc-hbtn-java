@@ -2,7 +2,7 @@ public class Program {
 	public static void main(String[] args) {
 		Endereco endereco = new Endereco("Rua Marechal Deodoro",
 	                    "135",
-	                    "",
+	                    "".trim(),
 	                    "Santo Amaro",
 	                    "Sao Paulo",
 	                    "SP",
