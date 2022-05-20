@@ -29,10 +29,11 @@ public class Empregado {
 	}
 	
 	public void apresentar(int codigo, String nome,Endereco endereco){
-	System.out.print("Codigo: " + codigo);
-	System.out.print("Nome: " + nome);
-	System.out.print("Bairro: " + endereco.bairro);
-	System.out.print("Cidade: " + endereco.cidade);
-	System.out.print("Pais: " + endereco.pais);
+	System.out.print("Codigo: " + codigo + "\n");
+	System.out.print("Nome: " + nome + "\n");
+	System.out.print("Bairro: " + endereco.bairro +  "\n");
+	System.out.print("Cidade: " + endereco.cidade + "\n");
+	System.out.print("Pais: " + endereco.pais + "\n");
+	
  }
 }
