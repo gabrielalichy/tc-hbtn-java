@@ -22,7 +22,7 @@ public class Empregado {
 	public void setEndereco(Endereco endereco) {
 	}
 	
-	public Empregado(String nome, int codigo, Endereco endereco) {
+	public Empregado(String nome, int codigo, Endereco endereco){
 		this.nome = nome;
 		this.codigo = codigo;
 		this.endereco = endereco;
@@ -33,6 +33,6 @@ public class Empregado {
 	System.out.println("Nome: " + nome);
 	System.out.println("Bairro: " + endereco.bairro);
 	System.out.println("Cidade: " + endereco.cidade);
-	System.out.println("Pais: " + endereco.pais);
+	System.out.println("Pais:" + endereco.pais);
  }
 }
