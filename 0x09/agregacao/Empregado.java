@@ -28,7 +28,7 @@ public class Empregado {
 		this.endereco = endereco;
 	}
 	
-	public void apresentar(int codigo, String nome, Endereco endereco) {
+	public void apresentar(int codigo, String nome, Endereco endereco){
 	System.out.println("Codigo: " + codigo);
 	System.out.println("Nome: " + nome);
 	System.out.println("Bairro: " + endereco.bairro);
