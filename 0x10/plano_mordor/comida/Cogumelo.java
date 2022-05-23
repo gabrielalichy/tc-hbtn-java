@@ -2,8 +2,8 @@ package comida;
 
 public class Cogumelo extends Comida {
 	public Cogumelo() {
+		super(-10);
 	}
 
-	public int pontos = -10;
 }
 

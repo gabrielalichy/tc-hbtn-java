@@ -7,5 +7,17 @@ public Comida () {
 	this.pontosDeFelicidade = pontosDeFelicidade;
 	}
 
+public int getPontosDeFelicidade() {
+	return pontosDeFelicidade;
+}
+
+public void setPontosDeFelicidade(int pontosDeFelicidade) {
+	this.pontosDeFelicidade = pontosDeFelicidade;
+}
+
+public Comida(int pontosDeFelicidade) {
+	this.setPontosDeFelicidade(pontosDeFelicidade);
+}
+
 	
 }
