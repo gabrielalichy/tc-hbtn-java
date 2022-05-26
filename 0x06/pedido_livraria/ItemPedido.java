@@ -1,4 +1,4 @@
-
+import produtos.Produto;
 
 public class ItemPedido {
 
