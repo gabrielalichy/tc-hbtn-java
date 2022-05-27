@@ -15,7 +15,7 @@ public class Pedido {
 		double total = 0;
 		double totalDesconto = 0;
 		DecimalFormat decimalFormat = new DecimalFormat("#,##0.00");
-        decimalFormat.setRoundingMode(RoundingMode.UP);
+        decimalFormat.setRoundingMode(RoundingMode.HALF_EVEN);
 		System.out.println("------- RESUMO PEDIDO -------");
 		for (int i = 0; i < this.itens.length; i++) {
 			
@@ -28,9 +28,9 @@ public class Pedido {
 		if (itens[i].getProdutos().getTitulo().equals("Duna")) {
 			DecimalFormat decimalFormat1 = new DecimalFormat("#,##0.00");
 			decimalFormat1.setRoundingMode(RoundingMode.DOWN);
-			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + " Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco: " +  decimalFormat1.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  " Quant: " + (itens[i].getQuantidade() + "  Total:" + decimalFormat1.format(va)));
+			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + "Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  decimalFormat1.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  "Quant: " + (itens[i].getQuantidade() + " Total:" + decimalFormat1.format(va) ));
 		}else {
-			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + " Titulo: "  + (itens[i].getProdutos().getTitulo()) + "  Preco: " +  decimalFormat.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  " Quant: " + (itens[i].getQuantidade() + "  Total: " + decimalFormat.format(va)));
+			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + "Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  decimalFormat.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  "Quant: " + (itens[i].getQuantidade() + " Total: " + decimalFormat.format(va)));
 		}
 		}	
 		System.out.println("----------------------------");
@@ -38,7 +38,7 @@ public class Pedido {
 		    System.out.println("DESCONTO: " + decimalFormat.format(totalDesconto));
 			System.out.println("TOTAL PRODUTO: "+  decimalFormat.format(valorTotal));
 			System.out.println("----------------------------");
-			System.out.println("TOTAL PEDIDO: " +decimalFormat.format(total));
+			System.out.println("TOTAL PEDIDO:: " +decimalFormat.format(total));
 			System.out.println("----------------------------");
 	}
 	
