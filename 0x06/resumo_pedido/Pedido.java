@@ -24,7 +24,8 @@ public class Pedido {
 		double percentual = (itens[i].getProdutos().obterPrecoLiquido()*this.percentualDesconto)/100;
 		total = total +  ( valor * itens[i].getQuantidade()) - ( percentual * itens[i].getQuantidade());
 		totalDesconto =totalDesconto + (percentual * itens[i].getQuantidade());
-		System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + "Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  manterCasas( itens[i].getProdutos().obterPrecoLiquido(),2) + " " +  "Quant: " + (itens[i].getQuantidade() + " Total: " +  manterCasas( itens[i].getProdutos().obterPrecoLiquido(),2)));
+		double va = (itens[i].getProdutos().obterPrecoLiquido()*itens[i].getQuantidade());
+		System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + "Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  manterCasas( itens[i].getProdutos().obterPrecoLiquido(),2) + " " +  "Quant: " + (itens[i].getQuantidade() + " Total: " + decimalFormat.format(va)));
 		
 		}	
 		System.out.println("----------------------------");
