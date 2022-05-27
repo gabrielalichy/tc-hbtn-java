@@ -28,9 +28,9 @@ public class Pedido {
 		if (itens[i].getProdutos().getTitulo().equals("Duna")) {
 			DecimalFormat decimalFormat1 = new DecimalFormat("#,##0.00");
 			decimalFormat1.setRoundingMode(RoundingMode.DOWN);
-			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  + "Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  decimalFormat1.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  " Quant: " + (itens[i].getQuantidade() + " Total: " + decimalFormat1.format(va) ));
+			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  + "  Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  decimalFormat1.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  " Quant: " + (itens[i].getQuantidade() + " Total: " + decimalFormat1.format(va) ));
 		}else {
-			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + "Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  decimalFormat.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  " Quant: " + (itens[i].getQuantidade() + " Total: " + decimalFormat.format(va)));
+			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  + "  Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  decimalFormat.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  " Quant: " + (itens[i].getQuantidade() + " Total: " + decimalFormat.format(va)));
 		}
 		}	
 		System.out.println("----------------------------");
