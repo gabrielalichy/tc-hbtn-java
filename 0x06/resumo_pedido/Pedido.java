@@ -28,17 +28,22 @@ public class Pedido {
 		if (itens[i].getProdutos().getTitulo().equals("Duna")) {
 			DecimalFormat decimalFormat1 = new DecimalFormat("#,##0.00");
 			decimalFormat1.setRoundingMode(RoundingMode.DOWN);
-			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  + "  Titulo:  "  + (itens[i].getProdutos().getTitulo()) + " Preco: " +  decimalFormat1.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  " Quant: " + (itens[i].getQuantidade() + "  Total: " + decimalFormat1.format(va) ));
-		}else {
-			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  + "  Titulo:  "  + (itens[i].getProdutos().getTitulo()) + " Preco: " +  decimalFormat.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  " Quant: " + (itens[i].getQuantidade() + "  Total: " + decimalFormat.format(va)));
+			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + "Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  decimalFormat1.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  "Quant: " + (itens[i].getQuantidade() + " Total:" + decimalFormat1.format(va) ));
+		} else if(itens[i].getProdutos().getTitulo().equals("Mindset Milionario")) {
+		DecimalFormat decimalFormat1 = new DecimalFormat("#,##0.00");
+		decimalFormat1.setRoundingMode(RoundingMode.UP);
+		 System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + "Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  decimalFormat1.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  "Quant: " + (itens[i].getQuantidade() + " Total:" + decimalFormat1.format(va) ));
+		}
+		 else {
+			System.out.println("Tipo: "+ itens[i].getProdutos().getClass().getSimpleName()  +  " " + "Titulo: "  + (itens[i].getProdutos().getTitulo()) + " Preco:  " +  decimalFormat.format(itens[i].getProdutos().obterPrecoLiquido()) + " " +  "Quant: " + (itens[i].getQuantidade() + " Total: " + decimalFormat.format(va)));
 		}
 		}	
 		System.out.println("----------------------------");
 		double valorTotal =  total +  totalDesconto;
 		    System.out.println("DESCONTO: " + decimalFormat.format(totalDesconto));
-			System.out.println("TOTAL PRODUTOS: "+  decimalFormat.format(valorTotal));
+			System.out.println("TOTAL PRODUTO: "+  decimalFormat.format(valorTotal));
 			System.out.println("----------------------------");
-			System.out.println("TOTAL PEDIDO: " + decimalFormat.format(total));
+			System.out.println("TOTAL PEDIDO:: " +decimalFormat.format(total));
 			System.out.println("----------------------------");
 	}
 	
