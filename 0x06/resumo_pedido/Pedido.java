@@ -10,11 +10,12 @@ public class Pedido {
 		this.itens = itens;
 		this.percentualDesconto = percentualDesconto;
 	}
+
 	public void apresentarResumoPedido() {
 		double total = 0;
 		double totalDesconto = 0;
 		DecimalFormat decimalFormat = new DecimalFormat("#,##0.00");
-        decimalFormat.setRoundingMode(RoundingMode.HALF_EVEN);
+        decimalFormat.setRoundingMode(RoundingMode.UP);
 		System.out.println("------- RESUMO PEDIDO -------");
 		for (int i = 0; i < this.itens.length; i++) {
 			
@@ -40,6 +41,7 @@ public class Pedido {
 			System.out.println("TOTAL PEDIDO:: " +decimalFormat.format(total));
 			System.out.println("----------------------------");
 	}
+	
 	static double manterCasas(double valor, int qtdCasas) {
 		double fator = (double) Math.pow(10, qtdCasas);
 	    return (double) (Math.floor(valor * fator) / fator);
