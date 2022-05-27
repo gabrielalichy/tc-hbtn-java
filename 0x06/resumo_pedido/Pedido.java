@@ -38,7 +38,7 @@ public class Pedido {
 		    System.out.println("DESCONTO: " + decimalFormat.format(totalDesconto));
 			System.out.println("TOTAL PRODUTO: "+  decimalFormat.format(valorTotal));
 			System.out.println("----------------------------");
-			System.out.println("TOTAL PEDIDO: " +decimalFormat.format(total));
+			System.out.println("TOTAL PEDIDO: " + decimalFormat.format(total));
 			System.out.println("----------------------------" + "          ");
 	}
 	
