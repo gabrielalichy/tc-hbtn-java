@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 import provedores.JadLog;
 import provedores.Loggi;
 import provedores.Sedex;
@@ -8,7 +10,7 @@ import provedores.Sedex;
             Pedido pedido2 = new Pedido(2, 600, 124.00);
             Pedido pedido3 = new Pedido(3, 3000, 53.00);
             Pedido pedido4 = new Pedido(4, 7000, 300.00);
-
+            Locale.setDefault(new Locale("pt", "BR"));
             ProcessadorPedido processadorPedidoSedex = new ProcessadorPedido(new Sedex());
             processadorPedidoSedex.processar(pedido1);
 
