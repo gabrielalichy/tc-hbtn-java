@@ -11,7 +11,7 @@ public class ProcessadorVideo {
 }
 	public void processar(Video video) {
 		for (int i = 0; i < canais.size(); i++) {
-		System.out.println("[" + canais.get(i).getClass().getSimpleName().toUpperCase() + "] "+ "{" + TipoMensagem.LOG + "}  "  +  video.getArquivo() + "  " +video.getFormato());			
+		System.out.println("[" + canais.get(i).getClass().getSimpleName().toUpperCase() + "] "+ "{" + TipoMensagem.LOG + "} - "  +  video.getArquivo() + " - " +video.getFormato());			
 		}
 	}
 
