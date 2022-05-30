@@ -1,8 +1,6 @@
 public interface CanalNotificacao {
 	
-	public static void notificar(Mensagem mensagem) {
-		
-	}
+	public void notificar(Mensagem mensagem);
 	
 	}
 
