@@ -8,13 +8,13 @@ public class Tarefa {
 	public Tarefa(String descricao, int identificador) {
 		this.descricao = descricao;
 		this.identificador = identificador;
+		modificarDescricao();
 	}
 
 	public void modificarDescricao() {
-		if(this.descricao == null && this.descricao.equals("")) {
+		if(this.descricao == null || this.descricao.isEmpty()) {
 			try {
 				throw new Exception();
-				
 			} catch (Exception e) {
 				System.out.println("Descricao de tarefa invalida");
 			}
