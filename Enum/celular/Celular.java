@@ -1,9 +1,9 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Celular {
 
-	private ArrayList<Contato> contato = new ArrayList();	
+	private ArrayList<Contato> contato = new ArrayList<Contato>();
+	
 	private boolean jaexiste = false;
 
 	private Integer obterPosicaoContato(String nomeContato) {
