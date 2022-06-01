@@ -1,72 +1,62 @@
 import java.util.ArrayList;
-import java.util.Iterator;
-
-import javax.swing.DefaultRowSorter;
 
 public class Celular {
 
-	private ArrayList<Contato> contato;
+	private ArrayList<Contato> contato = new ArrayList<Contato>();
+	private boolean jaexiste = false;
 
 	private Integer obterPosicaoContato(String nomeContato) {
 		for (int i = 0; i < contato.size(); i++) {
 			if (contato.get(i).getNome().equals(nomeContato)) {
 				return i;
 			}
-
 		}
-
 		return -1;
-
 	}
 
-	public void adicionarContato(String addContato) {
+	public void adicionarContato(Contato addContato) {
 
-		Integer retorno = obterPosicaoContato(addContato);
+		Integer retorno = obterPosicaoContato(addContato.getNome());
 
 		if (retorno > -1) {
-			try {
-				throw new Exception();
-			} catch (Exception e) {
-				System.out.println("Nao foi possivel adicionar contato. Contato jah existente com esse nome.");
-			}
+			throw new IllegalArgumentException(
+					"Nao foi possivel adicionar contato. Contato jah existente com esse nome.");
+		} else {
+			this.contato.add(addContato);
 		}
-
 	}
 
-	public void atualizarContato( Contato contatoAntigo, Contato novoContato) {
+	public void atualizarContato(Contato contatoAntigo, Contato novoContato) {
+		
+		Integer retorno = obterPosicaoContato(contatoAntigo.getNome());
+		Integer retornoNovo = obterPosicaoContato(novoContato.getNome());
+		if (retorno <= -1) {
+			jaexiste = true;
+			throw new IllegalArgumentException("Nao foi possivel modificar contato. Contato nao existe.");
 			
-			Integer retorno = obterPosicaoContato(contatoAntigo.getNome());
+		}
+		if (retornoNovo > -1 && jaexiste == true) {
+			throw new IllegalArgumentException(
+					"Nao foi possivel adicionar contato. Contato jah existente com esse nome.");
+		}
 
-			if (retorno > -1) {
-				try {
-					throw new Exception();
-				} catch (Exception e) {
-					System.out.println("Nao foi possivel modificar contato. Contato nao existe.");
+		if (retorno > -1) {
+			for (int i = 0; i < this.contato.size(); i++) {
+				if (contato.get(i).nome.equals(novoContato.getNome())) {
+					contato.set(i, novoContato);
+
 				}
-		}else {
-			
+			}
 		}
-			Integer novoRetorno = obterPosicaoContato(novoContato.getNome());
-			
-			if (novoRetorno > -1) {
-				try {
-					throw new Exception();
-				} catch (Exception e) {
-					System.out.println("Nao foi possivel modificar contato. Contato jah existente com esse nome.");
-				}
-				
-		}
+		
+	}
 
 	public void removerContato(Contato contato) {
 
 		Integer retorno = obterPosicaoContato(contato.getNome());
 
-		if (retorno > -1) {
-			try {
-				throw new Exception();
-			} catch (Exception e) {
-				System.out.println("Nao foi possivel remover contato. Contato nao existe.");
-			}
+		if (retorno <= -1) {
+			throw new IllegalArgumentException("Nao foi possivel remover contato. Contato nao existe.");
 		} else {
 			for (int i = 0; i < this.contato.size(); i++) {
 				this.contato.remove(i);
@@ -74,13 +64,11 @@ public class Celular {
 		}
 
 	}
-	
+
 	public void listarContatos() {
-		for (Contato contato2 : contato) {
-			
+		for (Contato contato2 : this.contato) {
+			System.out.println(contato2.getNome() + " -> " + contato2.getNumero() + "(" + contato2.getTipo() + ")");
 		}
-	
-	
-	
+
 	}
 }
