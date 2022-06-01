@@ -1,8 +1,9 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Celular {
 
-	private ArrayList<Contato> contato = new ArrayList<Contato>();
+	private List<Contato> contato = new ArrayList<Contato>();
 	private boolean jaexiste = false;
 
 	private Integer obterPosicaoContato(String nomeContato) {
@@ -67,7 +68,7 @@ public class Celular {
 
 	public void listarContatos() {
 		for (Contato contato2 : this.contato) {
-			System.out.println(contato2.getNome() + " -> " + contato2.getNumero() + "(" + contato2.getTipo() + ")");
+			System.out.println(contato2.getNome() + " -> " + contato2.getNumero() + " (" + contato2.getTipo() + ")");
 		}
 
 	}
