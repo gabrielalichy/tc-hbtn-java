@@ -4,6 +4,7 @@ import java.util.List;
 public class Celular {
 
 	private List<Contato> contato = new ArrayList<Contato>();
+	
 	private boolean jaexiste = false;
 
 	private Integer obterPosicaoContato(String nomeContato) {
@@ -21,7 +22,7 @@ public class Celular {
 
 		if (retorno > -1) {
 			throw new IllegalArgumentException(
-					"Nao foi possivel adicionar contato. Contato jah existente com esse nome.");
+					"Nao foi possivel adicionar contato. Contato jah existente com esse nome");
 		} else {
 			this.contato.add(addContato);
 		}
@@ -33,12 +34,12 @@ public class Celular {
 		Integer retornoNovo = obterPosicaoContato(novoContato.getNome());
 		if (retorno <= -1) {
 			jaexiste = true;
-			throw new IllegalArgumentException("Nao foi possivel modificar contato. Contato nao existe.");
+			throw new IllegalArgumentException("Nao foi possivel modificar contato. Contato nao existe");
 			
 		}
 		if (retornoNovo > -1 && jaexiste == true) {
 			throw new IllegalArgumentException(
-					"Nao foi possivel adicionar contato. Contato jah existente com esse nome.");
+					"Nao foi possivel adicionar contato. Contato jah existente com esse nome");
 		}
 
 		if (retorno > -1) {
@@ -57,7 +58,7 @@ public class Celular {
 		Integer retorno = obterPosicaoContato(contato.getNome());
 
 		if (retorno <= -1) {
-			throw new IllegalArgumentException("Nao foi possivel remover contato. Contato nao existe.");
+			throw new IllegalArgumentException("Nao foi possivel remover contato. Contato nao existe");
 		} else {
 			for (int i = 0; i < this.contato.size(); i++) {
 				this.contato.remove(i);
