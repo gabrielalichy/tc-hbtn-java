@@ -15,7 +15,7 @@ public class ListaTodo {
 		for (Tarefa tarefa : tarefas) {
 			if (tarefa.getIdentificador() == addtarefa.getIdentificador()) {
 				jaExiste = true;
-					throw new RuntimeException("Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista");
+				throw new IllegalArgumentException("Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista");
 				
 			}
 			
