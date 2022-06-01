@@ -64,10 +64,10 @@ public class ListaTodo {
 			if (!jaExiste) {
 				
 			if (tarefa.estahFeita == true) {
-				System.out.println("[X]" + " Id: " + tarefa.getIdentificador() + " - Descricao: " + tarefa.getDescricao());
+				System.out.println("[X]" + "  Id: " + tarefa.getIdentificador() + " - Descricao: " + tarefa.getDescricao());
 			} 
 			else {
-				System.out.println("[ ]" + " Id: " + tarefa.getIdentificador() + " - Descricao: " + tarefa.getDescricao());
+				System.out.println("[ ]" + "  Id: " + tarefa.getIdentificador() + " - Descricao: " + tarefa.getDescricao());
 			}
 			}
 		}	
