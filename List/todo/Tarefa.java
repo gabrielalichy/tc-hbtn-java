@@ -13,11 +13,7 @@ public class Tarefa {
 
 	public void modificarDescricao() {
 		if(this.descricao == null || this.descricao.isEmpty()) {
-			try {
-				throw new Exception();
-			} catch (Exception e) {
-				System.out.println("Descricao de tarefa invalida");
-			}
+			throw new RuntimeException("Descricao de tarefa invalida");
 		}
 		
 	}
@@ -27,7 +23,6 @@ public class Tarefa {
 	}
 
 	public void setDescricao(String descricao) {
-		
 		this.descricao = descricao;
 	}
 

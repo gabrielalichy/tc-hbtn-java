@@ -15,11 +15,7 @@ public class ListaTodo {
 		for (Tarefa tarefa : tarefas) {
 			if (tarefa.getIdentificador() == addtarefa.getIdentificador()) {
 				jaExiste = true;
-				try {
-					throw new Exception();
-				} catch (Exception e) {
-					System.out.println("Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista");
-				}
+					throw new RuntimeException("Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista");
 				
 			}
 			
@@ -42,8 +38,9 @@ public class ListaTodo {
 	public boolean desfazerTarefa(int identificador) {
 		for (Tarefa tarefa : tarefas) {
 			if (tarefa.getIdentificador() == identificador) {
-				tarefa.setEstahFeita(true);
+				tarefa.setEstahFeita(false);
 			}
+			
 		}
 		return false;
 	}
