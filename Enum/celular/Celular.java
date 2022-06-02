@@ -67,7 +67,7 @@ public class Celular {
 
 	public void listarContatos() {
 		for (Contato contato2 : this.contatos) {
-			System.out.println(contato2.getNome() + " -> " + contato2.getNumero() + "(" + contato2.getTipo() + ")");
+			System.out.println(contato2.getNome() + " -> " + contato2.getNumero() + " (" + contato2.getTipo() + ")");
 		}
 
 	}
