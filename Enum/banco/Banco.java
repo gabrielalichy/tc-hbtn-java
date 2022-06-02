@@ -72,7 +72,7 @@ public class Banco {
 					int a = 0;
 					for (int j = 0; j < retorno.getClientes().get(i).getTransacoes().size(); j++) {
 						a =		a +1;
-						System.out.println("[" + a + "] " + "valor " + retorno.getClientes().get(i).getTransacoes().get(j) );
+						System.out.println("  [" + a + "] " + "valor " + retorno.getClientes().get(i).getTransacoes().get(j) );
 					}
 			}
 			return true;
