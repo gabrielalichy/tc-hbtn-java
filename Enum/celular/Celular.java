@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class Celular {
 
-	private ArrayList<Contato> contato = new ArrayList();
+	private ArrayList<Contato> contatos = new ArrayList();
 	private boolean jaexiste = false;
 
 	private Integer obterPosicaoContato(String nomeContato) {
-		for (int i = 0; i < contato.size(); i++) {
-			if (contato.get(i).getNome().equals(nomeContato)) {
+		for (int i = 0; i < contatos.size(); i++) {
+			if (contatos.get(i).getNome().equals(nomeContato)) {
 				return i;
 			}
 		}
@@ -22,7 +22,7 @@ public class Celular {
 			throw new IllegalArgumentException(
 					"Nao foi possivel adicionar contato. Contato jah existente com esse nome.");
 		} else {
-			this.contato.add(addContato);
+			this.contatos.add(addContato);
 		}
 	}
 
@@ -41,9 +41,9 @@ public class Celular {
 		}
 
 		if (retorno > -1) {
-			for (int i = 0; i < this.contato.size(); i++) {
-				if (contato.get(i).nome.equals(novoContato.getNome())) {
-					contato.set(i, novoContato);
+			for (int i = 0; i < this.contatos.size(); i++) {
+				if (contatos.get(i).nome.equals(novoContato.getNome())) {
+					contatos.set(i, novoContato);
 
 				}
 			}
@@ -58,15 +58,15 @@ public class Celular {
 		if (retorno <= -1) {
 			throw new IllegalArgumentException("Nao foi possivel remover contato. Contato nao existe.");
 		} else {
-			for (int i = 0; i < this.contato.size(); i++) {
-				this.contato.remove(i);
+			for (int i = 0; i < this.contatos.size(); i++) {
+				this.contatos.remove(i);
 			}
 		}
 
 	}
 
 	public void listarContatos() {
-		for (Contato contato2 : this.contato) {
+		for (Contato contato2 : this.contatos) {
 			System.out.println(contato2.getNome() + " -> " + contato2.getNumero() + "(" + contato2.getTipo() + ")");
 		}
 
