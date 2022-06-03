@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
@@ -14,8 +16,7 @@ public class NumerosDuplicados {
 	}
 
 	public static TreeSet<Integer> buscar(int[] is) {
-		
-		TreeSet<Integer> mapeamento = new TreeSet<Integer>();
+		HashSet<Integer> mapeamento = new HashSet<Integer>();
 		int[] numeros = new int[is.length];
 		for (int i = 0; i < numeros.length; i++) {
 		    numeros[i] = numeros[i];
@@ -36,7 +37,7 @@ public class NumerosDuplicados {
 		    	mapeamento.add(entry.getKey());
 		    }
 		}
-	 
-		return mapeamento;
+		 TreeSet<Integer> hashSetToTreeSet = new TreeSet<>(mapeamento);
+		return hashSetToTreeSet;
 	}
 }
