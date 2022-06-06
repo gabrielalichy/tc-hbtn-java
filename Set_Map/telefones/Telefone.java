@@ -13,7 +13,7 @@ public class Telefone {
 	
 	@Override
 	public String toString() {
-		return "[(" + getCodigoArea() + ") " + getNumero() + ", ";
+		return "(" + getCodigoArea() + ") " + getNumero();
 	}
 
 
