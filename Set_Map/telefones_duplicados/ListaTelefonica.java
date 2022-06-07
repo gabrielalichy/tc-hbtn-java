@@ -8,6 +8,8 @@ public class ListaTelefonica {
 
 	HashMap<String, HashSet<Telefone>> pessoas;
 	HashSet<Telefone> telefone = new HashSet<>();
+	HashSet<Telefone> telefones = new HashSet<>();
+	boolean existe = false ;
 
 	public ListaTelefonica() {
 		pessoas = new HashMap<String, HashSet<Telefone>>();
@@ -27,21 +29,24 @@ public class ListaTelefonica {
 				} catch (Exception e) {
 					System.out.println("Telefone jah existente para essa pessoa.");
 					System.out.println("Telefone jah pertence a outra pessoa.");
+					existe = true;
 					return telefone;
 				}
 			}
-			Collection<HashSet<Telefone>> teste2 = this.pessoas.values(); 
-			if (teste2.contains(telefone1)) {
+			if (telefones.contains(telefone1)) {
 				return telefone;
 			}	
 		}
-				
+		  if (existe == false) {
 			telefone.add(telefone1);
+			telefones.add(telefone1); 
 			this.pessoas.put(nome,  telefone);
+		  }
 	
 	}
 		else {
 			telefone = new HashSet<>();
+			telefones.add(telefone1); 
 			telefone.add(telefone1);
 			this.pessoas.put(nome,  telefone);
 		}
@@ -63,6 +68,6 @@ public class ListaTelefonica {
 			return null;
 		}
 	}
-
-
 }
+
+
