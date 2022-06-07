@@ -29,7 +29,7 @@ public class ListaTelefonica {
 				try {
 					throw new Exception();
 				} catch (Exception e) {
-					System.out.println("Telefone jah existente para essa pessoa");
+					System.out.println("Telefone jah pertence a outra pessoa");
 					existe = true;
 					return telefone;
 				}
@@ -38,7 +38,7 @@ public class ListaTelefonica {
 				try {
 					throw new Exception();
 				} catch (Exception e) {
-					System.out.println("Telefone jah pertence a outra pessoa");
+					System.out.println("Telefone jah existente para essa pessoa");
 					existe = true;
 					return telefone;
 				}
