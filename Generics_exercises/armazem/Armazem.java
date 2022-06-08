@@ -13,12 +13,13 @@ public class Armazem<T> implements Armazenavel<Object>{
 	public T obterDoInventario(String nome) {
 		
 		for (Entry<String, Object> telefone : map.entrySet()) {
+			T value = (T) telefone.getValue();
 			if (nome.equals("Switch")) {
 				
-				T eletronico2 = (T) telefone.getValue();
+				T eletronico2 = value;
 				return eletronico2;
 			}else {
-				T comida = (T) telefone.getValue();
+				T comida = value;
 				return comida;
 			}
 		}
