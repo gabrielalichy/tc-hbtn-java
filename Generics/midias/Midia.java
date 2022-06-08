@@ -5,6 +5,10 @@ public class Midia {
 	public Midia(String livro) {
 		this.nome = livro;
 	}
+	
+	public Midia() {
+	}
+
 
 	@Override
 	public String toString() {
