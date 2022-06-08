@@ -31,8 +31,7 @@ public class Armazem<T> implements Armazenavel<Object>{
 	public void adicionarAoInventario(String nome, Object adicionar) {
 		map.put(nome, adicionar);
 		
-	}
-		
+	}		
 	
 
 

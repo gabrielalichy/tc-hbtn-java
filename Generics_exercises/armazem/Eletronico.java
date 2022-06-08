@@ -13,7 +13,7 @@ public class Eletronico {
 
 	@Override
 	public String toString() {
-		return  "[" +descricao +"] "  + "R$ " + String.format("%f",Float.valueOf(valor.toString())) ;
+		return  "[" +descricao +"] "  + "R$" + String.format("%f",Float.valueOf(valor.toString())) ;
 	}
 	
 	
