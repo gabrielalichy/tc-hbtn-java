@@ -12,7 +12,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Blog<V, K> {
+public class Blog {
 
 	private List<Post> postagem = new ArrayList<>();
 	Integer contagemDevops = 0; 
