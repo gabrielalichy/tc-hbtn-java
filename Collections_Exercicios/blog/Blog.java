@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Blog<V, K> {
 
@@ -23,7 +24,7 @@ public class Blog<V, K> {
 	
 	public Set<String> obterTodosAutores() {
 		
-		Set<String> autores = new HashSet<String>();
+		Set<String> autores = new TreeSet<String>();
 		
 		for (Post post : postagem) {
 			autores.add(post.getAutor());
