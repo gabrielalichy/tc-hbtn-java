@@ -13,19 +13,19 @@ import java.util.Set;
 
 public class Blog<V, K> {
 
-	List<Post> listaPost = new ArrayList<>();
+	private List<Post> postagem = new ArrayList<>();
 	Integer contagemDevops = 0; 
 	Integer contagemDesenvolvimento = 0; 
 
 	public void adicionarPostagem(Post post1) {
-		listaPost.add(post1);
+		postagem.add(post1);
 	}
 	
 	public Set<String> obterTodosAutores() {
 		
 		Set<String> autores = new HashSet<String>();
 		
-		for (Post post : listaPost) {
+		for (Post post : postagem) {
 			autores.add(post.getAutor());
 		}
 		return autores;
@@ -34,7 +34,7 @@ public class Blog<V, K> {
 	
 	public Map<String, Integer> obterContagemPorCategoria() {
 		Map<String,Integer> contagem = new HashMap<String, Integer>();
-		for (Post post : listaPost) {
+		for (Post post : postagem) {
 			if (post.getCategoria().equals("Desenvolvimento")) {
 				contagemDesenvolvimento = contagemDesenvolvimento + 1;
 				contagem.put(post.getCategoria(), contagemDesenvolvimento);
@@ -57,8 +57,6 @@ public class Blog<V, K> {
 		        result.put(entry.getKey(), entry.getValue());
 		    }
 		
-		return result;
+		return result;	
 	}
-	
-	
 }
