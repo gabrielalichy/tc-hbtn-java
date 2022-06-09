@@ -4,7 +4,7 @@ import java.util.Map.Entry;
 
 public class Armazem<T> implements Armazenavel<Object>{
 
-	public HashMap<String, Object> map = new HashMap<String, Object>();
+	public HashMap<String, Object> map = new HashMap<>();
 	
 	public Armazem(){};
 
@@ -15,7 +15,8 @@ public class Armazem<T> implements Armazenavel<Object>{
 		for (Entry<String, Object> telefone : map.entrySet()) {
 			if (nome.equals("Switch")) {
 				
-				T eletronico2 = (T) telefone.getValue();
+				T value = (T) telefone.getValue();
+				T eletronico2 = value;
 				return eletronico2;
 			}else {
 				T comida = (T) telefone.getValue();
@@ -31,7 +32,8 @@ public class Armazem<T> implements Armazenavel<Object>{
 	public void adicionarAoInventario(String nome, Object adicionar) {
 		map.put(nome, adicionar);
 		
-	}		
+	}
+		
 	
 
 
