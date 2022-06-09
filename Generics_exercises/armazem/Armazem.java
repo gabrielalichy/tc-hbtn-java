@@ -15,11 +15,11 @@ public class Armazem<T> implements Armazenavel<Object>{
 		for (Entry<String, Object> telefone : map.entrySet()) {
 			if (nome.equals("Switch")) {
 				
-				T value = (T) telefone.getValue();
+				T value = extracted(telefone);
 				T eletronico2 = value;
 				return eletronico2;
 			}else {
-				T comida = (T) telefone.getValue();
+				T comida = extracted(telefone);
 				return comida;
 			}
 		}
@@ -27,6 +27,11 @@ public class Armazem<T> implements Armazenavel<Object>{
 
 
 		}
+
+
+	private T extracted(Entry<String, Object> telefone) {
+		return (T) telefone.getValue();
+	}
 
 	@Override
 	public void adicionarAoInventario(String nome, Object adicionar) {
