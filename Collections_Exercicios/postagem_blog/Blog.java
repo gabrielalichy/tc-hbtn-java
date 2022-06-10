@@ -53,7 +53,7 @@ public class Blog {
 		}
 		
 		Set<Autor> teste = new LinkedHashSet<Autor>();
-		List<Autor> list = new ArrayList(autores);
+		List<Autor> list = new ArrayList<Autor>(autores);
 		Collections.sort(list);
 		
 		teste.addAll(list);
@@ -80,7 +80,7 @@ public class Blog {
 		}
 		
 		Set<Post> teste = new LinkedHashSet<Post>();
-		List<Post> list = new ArrayList(autor1);
+		List<Post> list = new ArrayList<Post>(autor1);
 		Collections.sort(list);
 		
 		teste.addAll(list);
@@ -92,18 +92,15 @@ public class Blog {
 		
 		Map<Autor, Set<Post>> masp = new HashMap<Autor, Set<Post>>();
 		   {
-		        // Create a list from elements of HashMap
 				for (int i = 0; i < postagem.size(); i++) {
 				
 					masp.put(postagem.get(i).getAutor(), obterPostsPorAutor(postagem.get(i).getAutor()));
 			}
 				List<Map.Entry<Autor, Set<Post>>> list = new LinkedList<Map.Entry<Autor, Set<Post>> >( masp.entrySet());
-		        // Sort the list using lambda expression
 		        Collections.sort(
 		            list,
 		            (i1, i2) -> i1.getKey().compareTo(i2.getKey()));
 		 
-		        // put data from sorted list to hashmap
 		        HashMap<Autor, Set<Post>> temp = new LinkedHashMap<Autor, Set<Post>>();
 		        for (Map.Entry<Autor, Set<Post>> aa : list) {
 		            temp.put(aa.getKey(), aa.getValue());
