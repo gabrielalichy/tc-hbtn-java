@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class Blog {
@@ -114,7 +114,7 @@ public class Blog {
 	}
 	
 	public Map<Categorias, Integer> obterContagemPorCategoria() {
-		Map<Categorias, Integer> contagemCategoria = new HashMap<Categorias, Integer>();
+		Map<Categorias, Integer> contagemCategoria = new TreeMap<Categorias, Integer>();
 		for (Post post : postagem) {
 			if (post.getCategoria().equals(Categorias.DESENVOLVIMENTO)) {
 				contagemDesenvolvimento = contagemDesenvolvimento + 1;
