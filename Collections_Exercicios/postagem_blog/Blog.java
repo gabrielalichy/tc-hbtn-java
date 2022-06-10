@@ -8,6 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Blog {
 
@@ -62,7 +63,7 @@ public class Blog {
 	}
 
 	public Set<Post> obterPostsPorAutor(Autor autor) {
-		Set<Post> autor1 = new HashSet<Post>();
+		Set<Post> autor1 = new TreeSet<Post>();
 		for (Post post2 : postagem) {
 			if(post2.getAutor().getNome().equals(autor.getNome())) {
 				autor1.add(post2);
@@ -72,7 +73,7 @@ public class Blog {
 	}
 	
 	public Set<Post> obterPostsPorCategoria(Categorias devops){
-		Set<Post> autor1 = new HashSet<Post>();
+		Set<Post> autor1 = new TreeSet<Post>();
 		for (Post post2 : postagem) {
 			if(post2.getCategoria().equals(devops)) {
 				autor1.add(post2);
