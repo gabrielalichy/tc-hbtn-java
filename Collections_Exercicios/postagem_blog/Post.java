@@ -54,7 +54,7 @@ public class Post implements Comparable<Post>{
 	 public int compareTo(Post post) {
        return this.titulo.compareTo(post.getTitulo());
    }
-
+	
 	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -72,5 +72,5 @@ public class Post implements Comparable<Post>{
         result = 31 * result + titulo.hashCode();
         return result;
     } 
-	
+
 }

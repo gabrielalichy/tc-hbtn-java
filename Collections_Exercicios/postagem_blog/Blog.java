@@ -117,12 +117,12 @@ public class Blog {
 	public Map<Categorias, Integer> obterContagemPorCategoria() {
 		Map<Categorias, Integer> contagemCategoria = new TreeMap<Categorias, Integer>();
 		for (Post post : postagem) {
-			if (post.getCategoria().equals(Categorias.DEVOPS)) {
-				contagemDevops = contagemDevops + 1;
-				contagemCategoria.put(post.getCategoria(), contagemDevops);
-			}else if (post.getCategoria().equals(Categorias.DESENVOLVIMENTO)) {
-				contagemDesenvolvimento =contagemDesenvolvimento + 1;
+			if (post.getCategoria().equals(Categorias.DESENVOLVIMENTO)) {
+				contagemDesenvolvimento = contagemDesenvolvimento + 1;
 				contagemCategoria.put(post.getCategoria(), contagemDesenvolvimento);
+			}else if (post.getCategoria().equals(Categorias.DEVOPS)) {
+				contagemDevops =contagemDevops + 1;
+				contagemCategoria.put(post.getCategoria(), contagemDevops);
 			}else {
 				contagemCategoria.put(post.getCategoria(), data);
 			}				
@@ -135,11 +135,11 @@ public class Blog {
 	public Map<Categorias, Set<Post>> obterTodosPostsPorCategorias() {
 		Map<Categorias, Set<Post>> contagemCategoria = new HashMap<Categorias, Set<Post>>();
 		for (Post post : postagem) {
-			if (post.getCategoria().equals(Categorias.DEVOPS)) {
-				obterPostsPorCategoria(Categorias.DEVOPS);
-				contagemCategoria.put(post.getCategoria(), obterPostsPorCategoria(Categorias.DEVOPS));
-			}else if (post.getCategoria().equals(Categorias.DESENVOLVIMENTO)) {
+			if (post.getCategoria().equals(Categorias.DESENVOLVIMENTO)) {
+				obterPostsPorCategoria(Categorias.DESENVOLVIMENTO);
 				contagemCategoria.put(post.getCategoria(), obterPostsPorCategoria(Categorias.DESENVOLVIMENTO));
+			}else if (post.getCategoria().equals(Categorias.DEVOPS)) {
+				contagemCategoria.put(post.getCategoria(), obterPostsPorCategoria(Categorias.DEVOPS));
 			}else {
 				contagemCategoria.put(post.getCategoria(), obterPostsPorCategoria(Categorias.DATA_SCIENCE));
 			}			
