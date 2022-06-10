@@ -34,30 +34,18 @@ public class Post implements Comparable<Post>{
 		this.corpo = corpo;
 	}
 
-	/**
-	 * @return the autor
-	 */
 	public Autor getAutor() {
 		return autor;
 	}
 
-	/**
-	 * @param autor the autor to set
-	 */
 	public void setAutor(Autor autor) {
 		this.autor = autor;
 	}
 
-	/**
-	 * @return the categoria
-	 */
 	public Categorias getCategoria() {
 		return categoria;
 	}
 
-	/**
-	 * @param categoria the categoria to set
-	 */
 	public void setCategoria(Categorias categoria) {
 		this.categoria = categoria;
 	}

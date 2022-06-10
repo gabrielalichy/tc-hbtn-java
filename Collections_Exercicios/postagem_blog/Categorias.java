@@ -8,7 +8,7 @@ public enum Categorias {
 
 		Categorias(String string) {
 		}
-
+ 
 		public String getDescricao() {
 			return descricao;
 		}

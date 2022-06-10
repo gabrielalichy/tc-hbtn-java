@@ -7,7 +7,7 @@ import java.util.*;
             Autor autor1 = new Autor("John", "Bannons");
             Autor autor2 = new Autor("Jane", "Doe");
             Autor autor3 = new Autor("Peter", "Dirkly");
-
+ 
             Post post1 = new Post(autor1, 
                 "Como implementar Terraform",
                 "Implementando IaC com Terraform bla bla bla",
