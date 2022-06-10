@@ -78,13 +78,13 @@ public class Blog {
 				autor1.add(post2);
 			}
 		}
-		
-		Set<Post> teste = new LinkedHashSet<Post>();
-		List<Post> list = new ArrayList<Post>(autor1);
-		Collections.sort(list);
-		
-		teste.addAll(list);
-		return teste;
+//		
+//		Set<Post> teste = new LinkedHashSet<Post>();
+//		List<Post> list = new ArrayList<Post>(autor1);
+//		Collections.sort(list);
+//		
+//		teste.addAll(list);
+		return autor1;
 		
 	}
 	
