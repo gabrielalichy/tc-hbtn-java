@@ -25,15 +25,16 @@ public class Blog {
     }
 
     public Set<Post> obterPostsPorAutor(Autor autor) {
-        Set<Post> postsPorAutor = new TreeSet<>();
+        Set<Post> posts = new TreeSet<>();
 
         for (Post post : listaPostagens) {
-            if (post.getAutor().equals(autor)) {
-                postsPorAutor.add(post);
+            if (post.getAutor().getNome().equals(autor.getNome()) && post.getAutor().getSobrenome().equals(autor.getSobrenome())) {
+                posts.add(post);
             }
         }
-        return postsPorAutor;
-    }
+
+        return posts;
+    } 
 
 
     public Map<Categorias, Integer> obterContagemPorCategoria(){
