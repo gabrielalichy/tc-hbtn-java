@@ -33,10 +33,11 @@ public class Autor implements Comparable<Autor>{
 		this.sobrenome = sobrenome;
 	}
 
+
 	@Override
-	public int compareTo(Autor arg0) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	 public int compareTo(Autor person) {
+        return this.nome.compareTo(person.getNome());
+    }
+
 
 }

@@ -1,7 +1,10 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -43,12 +46,18 @@ public class Blog {
 	public Set<Autor> obterTodosAutores() {
 
 		Set<Autor> autores = new LinkedHashSet<Autor>();
+		  
 
-
-		for (Post post : postagem) {
-			autores.add(post.getAutor());
+		for (int i = 0; i < postagem.size(); i++) {
+			autores.add(postagem.get(i).getAutor());
 		}
-		return autores;
+		
+		Set<Autor> teste = new LinkedHashSet<Autor>();
+		List<Autor> list = new ArrayList(autores);
+		Collections.sort(list);
+		
+		teste.addAll(list);
+		return teste;
 
 	}
 
@@ -69,19 +78,39 @@ public class Blog {
 				autor1.add(post2);
 			}
 		}
-		return autor1;
+		
+		Set<Post> teste = new LinkedHashSet<Post>();
+		List<Post> list = new ArrayList(autor1);
+		Collections.sort(list);
+		
+		teste.addAll(list);
+		return teste;
 		
 	}
 	
 	public Map<Autor, Set<Post>> obterTodosPostsPorAutor(){
 		
-
 		Map<Autor, Set<Post>> masp = new HashMap<Autor, Set<Post>>();
-		for (int i = 0; i < postagem.size(); i++) {
-			
-				masp.put(postagem.get(i).getAutor(), obterPostsPorAutor(postagem.get(i).getAutor()));
-		}
-		return masp;
+		   {
+		        // Create a list from elements of HashMap
+				for (int i = 0; i < postagem.size(); i++) {
+				
+					masp.put(postagem.get(i).getAutor(), obterPostsPorAutor(postagem.get(i).getAutor()));
+			}
+				List<Map.Entry<Autor, Set<Post>>> list = new LinkedList<Map.Entry<Autor, Set<Post>> >( masp.entrySet());
+		        // Sort the list using lambda expression
+		        Collections.sort(
+		            list,
+		            (i1, i2) -> i1.getKey().compareTo(i2.getKey()));
+		 
+		        // put data from sorted list to hashmap
+		        HashMap<Autor, Set<Post>> temp = new LinkedHashMap<Autor, Set<Post>>();
+		        for (Map.Entry<Autor, Set<Post>> aa : list) {
+		            temp.put(aa.getKey(), aa.getValue());
+		        }
+		        return temp;
+		        }
+
 		
 		
 	}
