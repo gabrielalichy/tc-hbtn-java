@@ -1,8 +1,4 @@
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
@@ -20,6 +16,7 @@ public class ConsultaPessoas {
 	public static Map<String, Long> obterContagemPessoasPorCargo(List<Pessoa> listPessoas) {
 
 		return listPessoas.stream().collect(Collectors.groupingBy(Pessoa::getCargo, Collectors.counting()));
+
 	}
 
 	public static Map<String, Map<Integer, Long>> obterContagemPessoasPorCargoEIdade(List<Pessoa> listPessoas) {
@@ -34,7 +31,6 @@ public class ConsultaPessoas {
 	}
 
 	public static Map<String, TreeSet<String>> obterHobbiesPorCargo(List<Pessoa> listPessoas) {
-
 		return listPessoas.stream().collect(Collectors.groupingBy(Pessoa::getCargo,
 				Collectors.flatMapping(pessoa -> pessoa.getHobbies().stream(), Collectors.toCollection(TreeSet::new))));
 	}
